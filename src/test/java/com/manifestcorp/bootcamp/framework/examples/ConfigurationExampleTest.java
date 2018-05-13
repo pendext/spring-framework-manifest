@@ -22,4 +22,13 @@ public class ConfigurationExampleTest {
 
         assertThat(expectedValue).isEqualTo(configurationExample.getPropertyFromEnvironmentVariable(expectedKey));
     }
+
+    @Test
+    public void propertiesExample() {
+        String expectedValue = "propertyValue";
+        String expectedKey = "propertyKey";
+
+        assertThat(expectedValue).isEqualTo(configurationExample.getPropertyFromProperties(expectedKey));
+    }
+
 }
