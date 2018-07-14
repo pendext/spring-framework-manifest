@@ -18,7 +18,7 @@ public class ConfigurationExampleTest {
     @Test
     public void environmentVariableExample() {
         String expectedValue = "expectedValue";
-        String expectedKey = "expectedKey";
+        String expectedKey = "expected.key";
 
         assertThat(expectedValue).isEqualTo(configurationExample.getPropertyFromEnvironmentVariable(expectedKey));
     }
@@ -26,7 +26,7 @@ public class ConfigurationExampleTest {
     @Test
     public void propertiesExample() {
         String expectedValue = "propertyValue";
-        String expectedKey = "propertyKey";
+        String expectedKey = "property.key";
 
         assertThat(expectedValue).isEqualTo(configurationExample.getPropertyFromProperties(expectedKey));
     }
